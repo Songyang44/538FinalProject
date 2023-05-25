@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>点击照片显示隐藏的<div>框</title>
-  <style>
-    .hidden {
-      display: none;
+<style>
+    .text-container {
+        width: 300px;
+        height: 200px;
+        background-color: #f5f5f5;
+        padding: 10px;
+        overflow: auto;
     }
-  </style>
-  <script>
-    function toggleDiv() {
-      var div = document.getElementById('hiddenDiv');
-      div.style.display = (div.style.display === 'none') ? 'block' : 'none';
-    }
-  </script>
+</style>
 </head>
 <body>
-  <img src="images/dog1.png" onclick="toggleDiv()" alt="照片">
-  <div id="hiddenDiv" class="hidden">
-    这是一个隐藏的<div>框
-  </div>
+    <div class="text-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nisi non nunc dignissim gravida sed ac leo. Vestibulum sit amet ligula dapibus, laoreet neque eu, lacinia ex. Quisque luctus nisi in sem laoreet, at vestibulum mi accumsan. Proin ut congue leo. Nullam a nisl at nibh bibendum commodo. Sed et felis mauris. Mauris at ultricies est. Aliquam semper orci vitae ligula tempor, ut lacinia lacus fringilla.</p>
+        <p>Sed volutpat sapien nec est vestibulum, ac tincidunt velit pulvinar. Sed aliquam justo vitae orci facilisis, nec congue velit aliquet. Praesent viverra pellentesque rhoncus. Morbi sed odio at mi ullamcorper volutpat. In et dui nec nisi tincidunt congue a ac mauris. Mauris a fermentum neque. Suspendisse rhoncus metus sed malesuada cursus.</p>
+    </div>
 </body>
 </html>
