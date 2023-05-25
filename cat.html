@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<style>
+					body {
+						transition: transform 2s ease;
+						margin: 0;
+						padding: 0;
+					}
+					.line {
+									position: absolute;
+									width: 10px;
+									height: 200%;
+									background-color: black;
+									left: 50%;
+									transform: translateY(-50%);
+					}
+					#bc1{
+						width: 175px;
+						height: 150px;
+						position: relative;
+						left: 575px;
+						top: 200px;
+						background-image: url("images/cat2.png");
+						background-size: cover;
+						border: none;
+						
+					}
+					#bg1{
+						width: 145px;
+						height: 150px;
+						position: relative;
+						left: 680px;
+						top: 200px;
+						background-image: url("images/dog2.png");
+						background-size: cover;
+						border: none;
+						
+					}
+					/* #leftim{
+						position: absolute;
+						left: 10px;
+						
+						width: 500px;
+						height: 600%;
+						background-image: url("images/blueflame.jpg");
+						background-size: cover;
+						border: none;
+						
+					}
+					#rightim{
+						position: relative;
+						left: 800px;
+						top: 120px;
+						width: 500px;
+						height: 200%;
+						background-image: url("images/redflame.jpg");
+						background-size: cover;
+						border: none;
+					} */
+								
+				</style>
+	</head>
+	<body>
+		
+		<!-- <div class="line"></div> -->
+		<!-- <div id="leftim"></div>
+		<div id="rightim"></div> -->
+		<button id="bc1"></button>
+		<button id="bg1"></button>
+	</body>
+	<script>
+				const button1 = document.getElementById('bc1');
+	
+				button1.addEventListener('click', function() {
+					document.body.style.transform = 'translateX(100%)';
+					setTimeout(function() {
+						window.location.href = 'new3.html';
+					}, 500); // 500毫秒后跳转到new3.html
+				});
+				
+				const button2 = document.getElementById('bg1');
+					
+				button2.addEventListener('click', function() {
+					document.body.style.transform = 'translateX(-100%)';
+					setTimeout(function() {
+						window.location.href = 'new4.html';
+					}, 500); // 500毫秒后跳转到new3.html
+				});
+			</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				transition: background-color 0.5s ease;
+				background-color: white;
+			}
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+				margin: 20px;
+			}
+
+			.container div {
+				width: 200px;
+				height: 200px;
+				background-color: white;
+				transition: background-color 0.5s ease;
+			}
+
+			.button {
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="div1"></div>
+			<div id="div2"></div>
+			<div id="div3"></div>
+			<div id="div4"></div>
+			<div id="div5"></div>
+		</div>
+
+		<button class="button" id="bt1">Button 1</button>
+		<button class="button" id="bt2">Button 2</button>
+		<button class="button" id="bt3">Button 3</button>
+		<button class="button" id="bt4">Button 4</button>
+		<button class="button" id="bt5">Button 5</button>
+
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script>
+			d3.selectAll(".button").on("click", function() {
+				const buttonIndex = d3.select(this).attr("id").slice(2) - 1;
+				// 恢复所有按钮和<div>块的样式为初始状态
+				d3.selectAll(".button").style("background-color", "");
+				d3.selectAll(".container div").style("background-color", "");
+
+
+				// 切换按钮和<div>块的样式
+				d3.selectAll(".button").style("background-color", "gray");
+				d3.select(this).style("background-color", "gray");
+
+				d3.selectAll(".container div").style("background-color", "gray");
+				d3.select(".container").select("div:nth-child(" + (buttonIndex + 1) + ")").style("background-color",
+					"#fff");
+
+				// 切换整个页面的背景颜色
+				d3.select("body").style("background-color", function() {
+					const isActive = d3.select(".container div:nth-child(" + (buttonIndex + 1) + ")").style(
+						"background-color") === "rgb(199, 112, 220)";
+					return isActive ? "#fff" : "gray";
+				});
+			});
+		</script>
+	</body>
+</html>

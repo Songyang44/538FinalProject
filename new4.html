@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Coordinate Axis</title>
+		<style>
+			body {
+				transition: transform 2s ease;
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+			}
+
+			/* #c1{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				
+			} */
+			.expanded {
+				width: 220px;
+				height: 665px;
+				left: 85px;
+			}
+
+			#yline {
+				position: relative;
+				width: 10px;
+				height: 635px;
+				top: 0px;
+				background-color: black;
+				left: 95%;
+				/* transform: translateY(-50%); */
+			}
+
+			#xline {
+				position: relative;
+				width: 1450px;
+				height: 10px;
+				background-color: black;
+				top: 0px;
+				left: 1.3%;
+				/* transform: translateY(-50%); */
+			}
+
+			#Eu {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 10%;
+				border: none;
+				background-color: white;
+
+			}
+
+			#As {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 14%;
+				border: none;
+				background-color: white;
+			}
+
+			#Sa {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 18%;
+				border: none;
+				background-color: white;
+			}
+
+			#Na {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 24%;
+				border: none;
+				background-color: white;
+			}
+
+			#Af {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 28%;
+				border: none;
+				background-color: white;
+			}
+
+			#Oc {
+				position: relative;
+				width: 150px;
+				height: 25px;
+				bottom: -15px;
+				left: 33%;
+				border: none;
+				background-color: white;
+			}
+
+			#Or {
+				position: absolute;
+				width: 150px;
+				height: 25px;
+				bottom: 30px;
+				left: 5%;
+				font-size: 12px;
+			}
+
+			#Si {
+				position: absolute;
+				width: 150px;
+				height: 25px;
+				top: 3%;
+				left: 97%;
+				font-size: 12px;
+			}
+
+			#Ga {
+				position: absolute;
+				width: 60px;
+				height: 25px;
+				top: 20%;
+				left: 96%;
+				border: none;
+				background-color: white;
+			}
+
+			#La {
+				position: absolute;
+				width: 60px;
+				height: 25px;
+				top: 35%;
+				left: 96%;
+				border: none;
+				background-color: white;
+			}
+
+			#Me {
+				position: absolute;
+				width: 60px;
+				height: 25px;
+				top: 50%;
+				left: 96%;
+				border: none;
+				background-color: white;
+			}
+
+			#Sm {
+				position: absolute;
+				width: 60px;
+				height: 25px;
+				top: 65%;
+				left: 96%;
+				border: none;
+				background-color: white;
+			}
+
+			#To {
+				position: absolute;
+				width: 60px;
+				height: 25px;
+				top: 80%;
+				left: 96%;
+				border: none;
+				background-color: white;
+			}
+
+			#Do {
+				position: absolute;
+				width: 50px;
+				height: 25px;
+				bottom: 50%;
+				left: 1%;
+				/* border: none;
+				background-color: white; */
+			}
+
+			#Ed {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 135px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/Europe.jpeg") ;
+				background-size: cover;
+
+			}
+
+			#Ad {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 359px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/Asia.jpeg") ;
+				background-size: cover;
+			}
+
+			#Sd {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 582px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/SouthAmerica.jpeg") ;
+				background-size: cover;
+			}
+
+			#Nd {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 805px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/NorthAmerica.jpeg") ;
+				background-size: cover;
+			}
+
+			#Ad2 {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 1028px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/Afric.jpeg") ;
+				background-size: cover;
+			}
+
+			#Od {
+				position: absolute;
+				width: 210px;
+				height: 665px;
+				bottom: 12%;
+				left: 1250px;
+				background-color: white;
+				transition: width 0.5s, height 0.5s;
+				background-image:url("images/Oceania.jpeg") ;
+				background-size: cover;
+			}
+
+			.highlight {
+				box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="c1">
+			<div id="yline"></div>
+			<h1 id="Si">Size</h1>
+			<button id="Ga">Gaint</button>
+			<button id="La">Large</button>
+			<button id="Me">Megrate</button>
+			<button id="Sm">Small</button>
+			<button id="To">Toy</button>
+			<div id="xline"></div>
+			<h1 id="Or">Origin</h1>
+			<button id="Eu">Europe</button>
+			<button id="As">Asia</button>
+			<button id="Sa">South America</button>
+			<button id="Na">North America</button>
+			<button id="Af">Africa</button>
+			<button id="Oc">Oceania</button>
+			<button id="Do">Dog</button>
+			<div id="Ed"></div>
+			<div id="Ad"> </div>
+			<div id="Sd"></div>
+			<div id="Nd"></div>
+			<div id="Ad2"></div>
+			<div id="Od"></div>
+
+		</div>
+	</body>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script>
+		const button4 = document.getElementById('Do');
+
+		button4.addEventListener('click', function() {
+			document.body.style.transform = 'translateX(100%)';
+			setTimeout(function() {
+				window.location.href = 'cat.html';
+			}, 1000); // 500毫秒后跳转到new3.html
+		});
+		
+		
+		// d3.selectAll(".button").on("click", function() {
+		// 	const buttonIndex = d3.select(this).attr("id").slice(2) - 1;
+		// 	// 恢复所有按钮和<div>块的样式为初始状态
+		// 	d3.selectAll(".button").style("background-color", "");
+		// 	d3.selectAll(".div").style("background-color", "");
+		
+		
+		// 	// 切换按钮和<div>块的样式
+		// 	d3.selectAll(".button").style("background-color", "gray");
+		// 	d3.select(this).style("background-color", "gray");
+		
+		// 	d3.selectAll(".div").style("background-color", "gray");
+		// 	d3.select(".div").select("div:nth-child(" + (buttonIndex + 1) + ")").style("background-color",
+		// 		"#fff");
+		
+		// 	// 切换整个页面的背景颜色
+		// 	d3.select("body").style("background-color", function() {
+		// 		const isActive = d3.select(".div:nth-child(" + (buttonIndex + 1) + ")").style(
+		// 			"background-color") === "rgb(199, 112, 220)";
+		// 		return isActive ? "#fff" : "gray";
+		// 	});
+		// });
+
+		/* //const divEd = document.getElementById('Ed');
+		const divEd = d3.select("#Ed");
+		//const divAd = document.getElementById('Ad');
+		const divAd = d3.select("#Ad");
+		//const divSd = document.getElementById('Sd');
+		const divSd = d3.select("#Sd");
+		//const divNd = document.getElementById('Nd');
+		const divNd = d3.select("#Nd");
+		//const divAd2 = document.getElementById('Ad2');
+		const divAd2 = d3.select("#Ad2");
+		//const divOd = document.getElementById('Od');
+		const divOd = d3.select("#Od");
+		//const buttonEu = document.getElementById('Eu');
+		const buttonEu = d3.select("#Eu");
+		//const buttonAs = document.getElementById('As');
+		const buttonAs = d3.select("#As");
+		//const buttonSa = document.getElementById('Sa');
+		const buttonSa = d3.select("#Sa");
+		//const buttonNa = document.getElementById('Na');
+		const buttonNa = d3.select("#Na");
+		//const buttonAf = document.getElementById('Af');
+		const buttonAf = d3.select("#Af");
+		//const buttonOc = document.getElementById('Oc');
+		const buttonOc = d3.select("#Oc");
+
+
+
+		let isExpanded = false;
+		let isSpotlightVisible = false;
+
+
+		buttonEu.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightEu();
+		});
+		buttonAs.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightAs();
+		});
+		buttonSa.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightSa();
+		});
+		buttonNa.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightNa();
+		});
+		buttonAf.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightAf();
+		});
+		buttonOc.on("click", function() {
+			isSpotlightVisible = !isSpotlightVisible;
+			updateSpotlightOc();
+		});
+
+		function updateSpotlightEu() {
+			if (isSpotlightVisible) {
+				divEd.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divEd.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+		function updateSpotlightAs() {
+			if (isSpotlightVisible) {
+				divAd.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divAd.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+		function updateSpotlightSa() {
+			if (isSpotlightVisible) {
+				divSd.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divSd.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+		function updateSpotlightNa() {
+			if (isSpotlightVisible) {
+				divNd.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divNd.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+		function updateSpotlightAf() {
+			if (isSpotlightVisible) {
+				divAd2.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divAd2.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+		function updateSpotlightOc() {
+			if (isSpotlightVisible) {
+				divOd.transition().duration(500).style("opacity", 0.5);
+				d3.select("body").style("background-color", "rgba(0, 0, 0, 0.5)");
+			} else {
+				divOd.transition().duration(500).style("opacity", 0);
+				d3.select("body").style("background-color", "white");
+			}
+		}
+
+		function expandDiv(element) {
+			if (!isExpanded) {
+				//element.classList.add('expanded');
+				divEd.style.width = '220px';
+				divEd.style.height = '670px';
+				isExpanded = true;
+			} else {
+				//element.classList.remove('expanded');
+				divEd.style.width = '210px';
+				divEd.style.height = '665px';
+				isExpanded = false;
+			}
+		}
+
+		buttonEu.addEventListener('click', function() {
+			//  	if (!isExpanded) {
+
+			//  		divEd.style.width = '220px';
+			//  		divEd.style.height = '670px';
+			//  		isExpanded = true;
+			//  	} else {
+			//  		divEd.style.width = '210px';
+			//  		divEd.style.height = '665px';
+			//  		isExpanded = false;
+			//  		}
+			//expandDiv(divEd);
+			divEd.classList.toggle('highlight');
+		});
+		buttonAs.addEventListener('click', function() {
+			if (!isExpanded) {
+
+				divAd.style.width = '220px';
+				divAd.style.height = '670px';
+				isExpanded = true;
+			} else {
+				divAd.style.width = '210px';
+				divAd.style.height = '665px';
+				isExpanded = false;
+			}
+			// expandDiv(divAd);
+		});
+		buttonSa.addEventListener('click', function() {
+			if (!isExpanded) {
+
+				divSd.style.width = '220px';
+				divSd.style.height = '670px';
+				isExpanded = true;
+			} else {
+				divSd.style.width = '210px';
+				divSd.style.height = '665px';
+				isExpanded = false;
+			}
+		});
+		buttonNa.addEventListener('click', function() {
+			if (!isExpanded) {
+
+				divNd.style.width = '220px';
+				divNd.style.height = '670px';
+				isExpanded = true;
+			} else {
+				divNd.style.width = '210px';
+				divNd.style.height = '665px';
+				isExpanded = false;
+			}
+		});
+		buttonAf.addEventListener('click', function() {
+			if (!isExpanded) {
+
+				divAd2.style.width = '220px';
+				divAd2.style.height = '670px';
+				isExpanded = true;
+			} else {
+				divAd2.style.width = '210px';
+				divAd2.style.height = '665px';
+				isExpanded = false;
+			}
+		});
+		buttonOc.addEventListener('click', function() {
+			if (!isExpanded) {
+
+				divOd.style.width = '220px';
+				divOd.style.height = '670px';
+				isExpanded = true;
+			} else {
+				divOd.style.width = '210px';
+				divOd.style.height = '665px';
+				isExpanded = false;
+			}
+		}); */
+	</script>
+</html>

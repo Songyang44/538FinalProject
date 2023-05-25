@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Screen Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #ccc;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #cat-button,
+    #dog-button {
+      position: absolute;
+      top: 50%;
+      width: 100px;
+      height: 40px;
+      background-color: #f8f8f8;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transform: translateX(-50%);
+      transition: transform 50s ease-in-out;
+    }
+
+    #cat-button {
+      left: 50%;
+    }
+
+    #dog-button {
+      right: 50%;
+    }
+
+    .cat-screen #divider,
+    .cat-screen #cat-button {
+      transform: translateX(100vw);
+    }
+
+    .dog-screen #divider,
+    .dog-screen #dog-button {
+      transform: translateX(-100vw);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="divider"></div>
+    <button id="cat-button" onclick="moveToCatScreen()">猫</button>
+    <button id="dog-button" onclick="moveToDogScreen()">狗</button>
+  </div>
+
+  <script>
+    function moveToCatScreen() {
+      var container = document.getElementById("container");
+      container.classList.add("cat-screen");
+	  //window.location.href="cat.html";
+    }
+
+    function moveToDogScreen() {
+      var container = document.getElementById("container");
+      container.classList.remove("cat-screen");
+    }
+  </script>
+</body>
+
+</html>

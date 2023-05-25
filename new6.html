@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>点击照片显示隐藏的<div>框</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleDiv() {
+      var div = document.getElementById('hiddenDiv');
+      div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <img src="images/dog1.png" onclick="toggleDiv()" alt="照片">
+  <div id="hiddenDiv" class="hidden">
+    这是一个隐藏的<div>框
+  </div>
+</body>
+</html>
