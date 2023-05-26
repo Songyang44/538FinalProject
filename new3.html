@@ -5,6 +5,26 @@
 		<title>Coordinate Axis</title>
 		<link rel="stylesheet" href="css/new3.css">
 		<style>
+			@font-face {
+				font-family: "ArtFont";
+				src: url("font/fatFish.TTF");
+			}
+			#Ca {
+				position: absolute;
+				width: 50px;
+				height: 150px;
+				bottom: 50%;
+				left: 96.6%;
+				background-image: url("images/catside4.png");
+				background-size: cover;
+				background-position: right;
+				border: none;
+				
+			}
+			#Ca:hover{
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
 			#Ed {
 				position: absolute;
 				width: 210px;
@@ -15,6 +35,7 @@
 				transition: width 0.5s, height 0.5s;
 				background-image: url("images/Europe.jpeg");
 				background-size: cover;
+				opacity: 1;
 
 			}
 
@@ -28,6 +49,7 @@
 				transition: width 0.5s, height 0.5s;
 				background-image: url("images/Asia.jpeg");
 				background-size: cover;
+				
 			}
 
 			#Sd {
@@ -38,7 +60,7 @@
 				left: 525px;
 				background-color: white;
 				transition: width 0.5s, height 0.5s;
-				background-image: url("images/SouthAmerica.jpeg");
+				background-image: url("images/southAmeric.jpg");
 				background-size: cover;
 			}
 
@@ -84,48 +106,57 @@
 			}
 
 
+			/* 1. Persian */
 			#PerInfo {
 				width: 175px;
 				height: 500px;
 				display: none;
 				background-color: white;
 				position: absolute;
-				top: 0;
+				top: -250%;
 				left: 100%;
 				margin-left: 10px;
 				white-space: pre-wrap;
-				color: black;
+				color: #FFC0CB;
+				font-size: 15px;
+				font-family: "ArtFont",sans-serif;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				border-width: 5px; /* 设置边框宽度 */
+				border-style: solid; /* 设置边框样式为实线 */
+				border-image: url('images/border/flower.png') 30 round; /* 设置边框图像和其他属性 */
 			}
-
 			#perCon {
 				font-size: 12px;
 				color: white;
 				position: absolute;
 				top: 47%;
 				left: 6%;
-
+				border: none;
 			}
-
 			#Pertext {
 				margin-top: 0px;
 			}
-
 			#Persian {
 				width: 50px;
 				height: 50px;
-
+				border-radius: 50%;
 			}
-
+			#Persian:hover {
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
 			#persian {
-				width: 50px;
-				height: 50px;
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
 			}
 
 
-			
-
+			/* 2. Ragdoll */
 			#RagInfo {
-				width: 175px;
+				width: 180px;
 				height: 500px;
 				display: none;
 				background-color: white;
@@ -134,48 +165,68 @@
 				left: 100%;
 				margin-left: 10px;
 				white-space: pre-wrap;
-				color: black;
-				background-image: url("images/bluecard.jpeg");
+				color: #FFC0CB;
+				background-image: url("images/bludcard8.png");
 				background-size: cover;
-				
-				
-
+				font-size: 15px;
+				font-family: "ArtFont",sans-serif;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				border-width: 20px; 	
+				border-style: solid; 
+				border-image: url('images/border/grace.jpeg') 40 round; 				
 			}
-
 			#ragCon {
 				font-size: 12px;
 				color: white;
 				position: absolute;
 				top: 12%;
 				left: 50%;
-
 			}
-
 			#Ragtext {
 				margin-top: 0px;
 			}
-
-			#Ragdoll,
-			#ragdoll {
+			#Ragdoll {
 				width: 50px;
 				height: 50px;
+				border-radius: 50%;
 			}
-
+			#Ragdoll:hover {
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
+			#ragdoll {
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+			}
+			
+			
+			/* 3. Siamese */
 			#SiaInfo {
 				width: 175px;
 				height: 500px;
 				display: none;
 				background-color: white;
 				position: absolute;
-				top: 0;
-
+				top: -180%;
+				font-size: 15px;
 				left: 100%;
 				margin-left: 10px;
 				white-space: pre-wrap;
-				color: black;
-				background-image: url("images/bluecard.jpeg")
+				color: #FFC0CB;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				font-family: "ArtFont",sans-serif;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				border-width: 5px; /* 设置边框宽度 */
+				border-style: solid; /* 设置边框样式为实线 */
+				border-image: url('images/border/flower.png') 30 round; /* 设置边框图像和其他属性 */
 			}
-
 			#siaCon {
 				font-size: 12px;
 				color: white;
@@ -183,32 +234,46 @@
 				top: 47%;
 				left: 20%;
 			}
-
 			#Siatext {
 				margin-top: 0px;
 			}
-
-			#Siamese,
-			#siamese {
+			#Siamese {
 				width: 50px;
 				height: 50px;
+				border-radius: 50%;
 			}
-
+			#Siamese:hover {
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
+			#siamese {
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+			}
+			
+			
+			/* 4. Bshort */
 			#BsInfo {
 				width: 175px;
-				height: 500px;
+				height: 525px;
 				display: none;
 				background-color: white;
 				position: absolute;
 				top: 0;
-
+				font-size: 15px;
 				left: 100%;
 				margin-left: 10px;
 				white-space: pre-wrap;
-				color: black;
-				background-image: url("images/bluecard.jpeg")
+				color: #FFC0CB;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				font-family: "ArtFont",sans-serif;
+				border-width: 5px; /* 设置边框宽度 */
+				border-style: solid; /* 设置边框样式为实线 */
+				border-image: url('images/border/flower.png') 30 round; /* 设置边框图像和其他属性 */
 			}
-
 			#bsCon {
 				font-size: 12px;
 				color: white;
@@ -216,32 +281,49 @@
 				top: 12%;
 				left: 6%;
 			}
-
 			#Bstext {
 				margin-top: 0px;
 			}
-
-			#Bshort,
-			#bshort {
+			#Bshort {
 				width: 50px;
 				height: 50px;
+				border-radius: 50%;
 			}
-
+			#Bshort:hover {
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
+			#bshort {
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+			}
+			
+			
+			/* 5. Chartreux */
 			#ChaInfo {
 				width: 175px;
-				height: 500px;
+				height: 550px;
 				display: none;
 				background-color: white;
 				position: absolute;
-				top: 0;
-
+				top: -250%;
+				font-size: 15px;
 				left: 100%;
 				margin-left: 10px;
 				white-space: pre-wrap;
-				color: black;
-				background-image: url("images/bluecard.jpeg")
+				color: #FFC0CB;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				font-family: "ArtFont",sans-serif;
+				background-image: url("images/bludcard8.png");
+				background-size: cover;
+				font-size: 15px;
+				border-width: 5px; /* 设置边框宽度 */
+				border-style: solid; /* 设置边框样式为实线 */
+				border-image: url('images/border/flower.png') 30 round; /* 设置边框图像和其他属性 */
 			}
-
 			#chaCon {
 				font-size: 12px;
 				color: white;
@@ -249,15 +331,22 @@
 				top: 35%;
 				left: 6%;
 			}
-
 			#Chatext {
 				margin-top: 0px;
 			}
-
-			#Chartreux,
-			#chartreux {
+			#Chartreux {
 				width: 50px;
 				height: 50px;
+				border-radius: 50%;
+			}
+			#Chartreux:hover {
+				transform: scale(1.3);
+				transition: transform 0.5s;
+			}
+			#chartreux {
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
 			}
 		</style>
 
@@ -279,7 +368,7 @@
 			<button id="Na">North America</button>
 			<button id="Af">Africa</button>
 			<button id="Oc">Oceania</button>
-			<button id="Ca">Cat</button>
+			<button id="Ca"></button>
 			<div id="Ed"></div>
 			<div id="Ad"> </div>
 			<div id="Sd"></div>
@@ -291,7 +380,8 @@
 				<p id="Pertext">Persian</p>
 				<div id="PerInfo"><img id="persian" src="images/catimages/Persian.jpeg" alt="">
 					Breed: Persian Cat
-					Character: Gentle, Alert, Less active, Calm
+					Character: 
+					Gentle, Alert, Less active, Calm
 					Size: Megrate
 					Weight: 3-7kg
 					Friendliness: ★★★★☆
@@ -306,7 +396,8 @@
 				<p id="Ragtext">Ragdoll</p>
 				<div id="RagInfo"><img id="ragdoll" src="images/catimages/Ragdoll.jpeg" alt="">
 					Breed:Ragdoll Cat
-					Character:Gentle,Quiet,Friendly to people
+					Character:
+					Gentle,Quiet,Friendly to people
 					Size: Large
 					Weight: 4-9kg
 					Friendliness: ★★★★☆
@@ -321,7 +412,8 @@
 				<p id="Siatext">Siamese</p>
 				<div id="SiaInfo"><img id="siamese" src="images/catimages/Siamese.jpeg" alt="">
 					Breed: Siamese Cat
-					Character: Fiery, Active, Quick-witted, Curious
+					Character: 
+					Fiery, Active, Quick-witted, Curious
 					Size: Megrate
 					Weight: 2-6kg
 					Friendliness: ★★★☆☆
@@ -336,7 +428,8 @@
 				<p id="Bstext">British Shorthair</p>
 				<div id="BsInfo"><img id="bshort" src="images/catimages/Bshort.jpeg" alt="">
 					Breed: British Shorthair Cat
-					Character: Sweet, Affectionate towards humans
+					Character: 
+					Sweet, Affectionate towards humans
 					Size: Large
 					Weight: 4-8kg
 					Friendliness: ★★★★☆
@@ -351,7 +444,8 @@
 				<p id="Chatext">Chartreux</p>
 				<div id="ChaInfo"><img id="chartreux" src="images/catimages/Chartreux.jpeg" alt="">
 					Breed: Chartreux Cat
-					Character: Gentle, Affectionate, Intelligent, Independent
+					Character: 
+					Gentle, Affectionate, Intelligent, Independent
 					Size: Megrate
 					Weight: 4-7kg
 					Friendliness: ★★★★☆
